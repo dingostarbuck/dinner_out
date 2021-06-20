@@ -1,0 +1,89 @@
+import random
+from secrets import choice
+
+# initial query
+print('What\'s for dinner? Let us find out')
+
+# list of lists
+take_out = ['Pizza', 'Burgers', 'Japanese Food', 'Chinese Food', 'BBQ (any variety)', 'Pasta']
+pizza_brands = ['Pizza Hut', 'TJs', 'Kookos', 'Boston Pizza', 'Red Swan(lmao)']
+burger_joints = ['Burger King', 'Maccas', 'Fat Burger', 'A&W', 'Wendys', 'Dairy Queen']
+japanese_food = ['The only option is Edo Japan lmao']
+chinese_food = ['Red Pepper', 'That one bum-ass chinese place we always order from']
+bbq_food = ['Montanas', 'Korean BBQ question mark', ]
+pasta_food = ['Gonna keep it a buck with you i have no idea what pasta places are good here, roll again?']
+home_cooked = ['Spaghetti', 'Grilled Cheese & Soup', 'Cereal mother fuckers!!!', 'Stuffed Chicken']
+
+
+# definitions for different types of food
+
+def random_home_cooked():
+    print(choice(home_cooked))
+
+
+def random_take_out():
+    print(random.choice(take_out))
+    # print(choice(take_out))
+
+
+def random_pizza():
+    # print(random.choice(pizza_brands))
+    print(choice(pizza_brands))
+
+
+def random_chinese():
+    # print(random.choice(chinese_food))
+    print(choice(chinese_food))
+
+
+def random_burger():
+    print(choice(burger_joints))
+
+
+def random_japanese():
+    print(choice(japanese_food))
+
+
+def random_bbq():
+    print(choice(bbq_food))
+
+
+def random_pasta():
+    print(choice(pasta_food))
+
+
+def random_home():
+    print(choice(home_cooked))
+
+
+# asks user if they want take out
+answer = input('Do you want take out?   ')
+if answer == 'yes':
+    random_take_out()
+if answer == 'no':
+    random_home_cooked()
+
+# depending on the result from one of the random options on 60 and 62,
+# program will ask what user got, then will print a different brand
+
+answer = input('So what did we get today? ')
+if answer == 'Pizza':
+    random_pizza()
+if answer == 'Burgers':
+    random_burger()
+if answer == 'Japanese Food':
+    random_japanese()
+if answer == 'Chinese Food':
+    random_chinese()
+if answer == 'BBQ (any variety)':
+    random_bbq()
+if answer == 'Pasta':
+    random_pasta()
+if answer == 'Spaghetti':
+    print('That is a great choice!')
+if answer == 'Grilled Cheese & Soup':
+    print('Fuck that is a good one.')
+if answer == 'Cereal mother fuckers!!!':
+    print('oh FUCK YES. Cinnamon toast CRUNCH')
+if answer == 'Stuffed Chicken':
+    print('I mean that is alright lmao')
